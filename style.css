@@ -1,0 +1,145 @@
+/* EveryPet site — colours mirror the app's theme tokens (src/theme/tokens.ts). */
+
+@font-face {
+  font-family: 'Baloo 2';
+  src: url('fonts/baloo-2-latin-700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('fonts/nunito-latin-600-normal.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('fonts/nunito-latin-700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --sage-bg: #e8f1e3;
+  --sage: #5f8d6a;
+  --sage-deep: #4d7a58;
+  --sage-mid: #8fb996;
+  --sage-soft: #ddead7;
+  --cream: #fffdf7;
+  --ink: #2f3a32;
+  --muted: #6d776f;
+  --coral: #e4907f;
+  --warn: #fdf2ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--sage-bg);
+  color: var(--ink);
+  font-family: 'Nunito', -apple-system, system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 16px 64px;
+}
+
+h1,
+h2 {
+  font-family: 'Baloo 2', -apple-system, system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 24px;
+  margin-top: 32px;
+  color: var(--sage-deep);
+}
+
+a {
+  color: var(--sage-deep);
+  font-weight: 700;
+}
+
+.card {
+  background: var(--cream);
+  border-radius: 28px;
+  padding: 28px 24px;
+  box-shadow: 0 8px 24px rgba(77, 122, 88, 0.12);
+}
+
+.center {
+  text-align: center;
+}
+
+.hero {
+  font-size: 80px;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.lead {
+  font-size: 19px;
+  color: var(--muted);
+  margin: 12px 0 0;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 16px 32px;
+  border-radius: 28px;
+  background: var(--sage);
+  color: var(--cream);
+  font-family: 'Baloo 2', -apple-system, system-ui, sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.small {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.notice {
+  background: var(--warn);
+  border-radius: 22px;
+  padding: 16px 20px;
+  margin-top: 24px;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Policy text */
+.policy ul {
+  padding-left: 22px;
+}
+.policy li {
+  margin: 6px 0;
+}
+.policy .card {
+  margin-top: 24px;
+}

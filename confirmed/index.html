@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="robots" content="noindex" />
+    <title>Email confirmed · EveryPet</title>
+    <link rel="icon" href="../favicon.png" />
+    <link rel="stylesheet" href="../style.css" />
+    <script>
+      // The confirmation link arrives with a sign-in token (or an error) in
+      // the address. The app doesn't need it here, so drop it from the
+      // address bar and history before anything else happens.
+      (function () {
+        var raw = (location.hash || '').replace(/^#/, '') + '&' + (location.search || '').replace(/^\?/, '');
+        var params = new URLSearchParams(raw);
+        window.everypetLinkFailed = params.has('error') || params.has('error_code');
+        if (location.hash || location.search) {
+          history.replaceState(null, '', location.pathname);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <main>
+      <div class="card center" id="ok">
+        <div class="hero">🐾</div>
+        <h1>Email confirmed!</h1>
+        <p class="lead">You're all set. Head back to EveryPet on your iPhone and sign in with your email and password.</p>
+        <a class="button" href="pawlog://">Open EveryPet</a>
+        <p class="small">You can close this page.</p>
+      </div>
+
+      <div class="card center" id="failed" hidden>
+        <div class="hero">🙈</div>
+        <h1>That link has expired</h1>
+        <p class="lead">Confirmation links only work once, and not forever.</p>
+        <div class="notice">
+          If you've already confirmed, just sign in to EveryPet. If not, create your account again in the app and we'll send a fresh link.
+        </div>
+        <a class="button" href="pawlog://">Open EveryPet</a>
+      </div>
+
+      <footer>
+        Need a hand? <a href="mailto:everypet@spennyd.co">everypet@spennyd.co</a><br />
+        <a href="../privacy/">Privacy policy</a>
+      </footer>
+    </main>
+    <script>
+      if (window.everypetLinkFailed) {
+        document.getElementById('ok').hidden = true;
+        document.getElementById('failed').hidden = false;
+        document.title = 'Link expired · EveryPet';
+      }
+    </script>
+  </body>
+</html>
