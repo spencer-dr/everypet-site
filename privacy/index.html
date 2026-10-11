@@ -12,16 +12,15 @@
     <main class="policy">
       <p><a href="../">← EveryPet</a></p>
       <h1>Privacy policy 🐾</h1>
-      <p class="small">Last updated: 9 October 2026</p>
+      <p class="small">Last updated: 11 October 2026</p>
 
       <div class="card">
         <strong>The short version:</strong> EveryPet stores your email address, the name you choose, and what you
-        log about your pets — only so the app can work. No ads, no analytics, no trackers, and we never sell or share
-        your data for marketing. You can delete everything from inside the app at any time.
+        log about your pets — so the app can work — plus anonymous usage stats you can switch off. No ads, no
+        tracking across other apps, and we never sell or share your data for marketing. You can delete everything
+        from inside the app at any time.
       </div>
-      <!-- PLACEHOLDER (T13 PostHog / T14 RevenueCat): when either ships, reword the short version above,
-           e.g. "…and what you log about your pets, plus anonymous usage stats and your purchase status.
-           No ads, and we never sell or share your data for marketing." -->
+      <!-- PLACEHOLDER (T14 RevenueCat): when purchases ship, add "and your purchase status" to the short version. -->
 
       <h2>Who we are</h2>
       <p>
@@ -50,13 +49,14 @@
           <strong>Medications and reminders</strong> — medication names, doses and how often they're given, plus the medication reminder and daily nudge times you set.
         </li>
         <li><strong>App settings</strong> — for example, which tips you've already dismissed.</li>
-        <!-- PLACEHOLDER (T13 PostHog) — uncomment when analytics ships; confirm details against D12:
         <li>
-          <strong>Usage information</strong> — which parts of the app you use (for example, that a log was saved),
-          linked to a random account ID — never your email, your pets' details or what you write in notes. We use it
-          to fix problems and improve the app. You can turn it off in Settings. [D12: region, events, session replay]
+          <strong>Usage information</strong> — a few app events: that you created an account, finished a setup step,
+          added a pet (the kind of animal only), saved a log (the type and status, e.g. "Food · Ate well"), opened
+          the vet summary or turned on a reminder, and when the app is opened. It's linked to a random account ID and
+          basic device details (iPhone model, iOS and app version) — never your email, your pets' or medications'
+          names, or what you write in notes. We don't record your screen and don't use your location. We use it to
+          fix problems and improve the app. You can turn it off in Settings → Privacy.
         </li>
-        -->
         <!-- PLACEHOLDER (T14 RevenueCat) — uncomment when purchases ship; confirm against D13:
         <li>
           <strong>Purchases</strong> — if you subscribe, Apple takes the payment; we receive your purchase status and
@@ -64,15 +64,14 @@
         </li>
         -->
       </ul>
-      <p>That's everything. EveryPet has no ads, no analytics tools and no trackers.</p>
-      <!-- PLACEHOLDER (T13 PostHog): replace the line above with
-           "That's everything. EveryPet has no ads and doesn't track you across other apps or websites." -->
+      <p>That's everything. EveryPet has no ads and doesn't track you across other apps or websites.</p>
 
       <h2>Why we use it</h2>
       <p>
         Only to give you the app: keeping your pets' history, building the vet summary you choose to show, sending the
         reminders you set, and emailing you when you confirm your account or reset your password. The legal basis is
-        that we need this information to provide the service you've asked for.
+        that we need this information to provide the service you've asked for. Usage information is different: we
+        use it because we have a legitimate interest in improving the app, and you can switch it off at any time.
       </p>
 
       <h2>Where it's kept and who helps us</h2>
@@ -85,11 +84,9 @@
           <strong>Resend</strong> sends our emails (account confirmation, password reset and email change codes), so
           it handles your email address for that purpose.
         </li>
-        <!-- PLACEHOLDER (T13 PostHog) — uncomment when analytics ships:
         <li>
-          <strong>PostHog</strong> collects the anonymous usage information described above, in [D12: EU / US].
+          <strong>PostHog</strong> collects the usage information described above and stores it in the EU.
         </li>
-        -->
         <!-- PLACEHOLDER (T14 RevenueCat) — uncomment when purchases ship:
         <li>
           <strong>RevenueCat</strong> manages subscriptions with Apple, so it receives your random account ID and
@@ -115,7 +112,7 @@
         <li><strong>See and correct</strong> — everything we hold is visible and editable in the app.</li>
         <li>
           <strong>Delete</strong> — Settings → Delete my account permanently erases your account and every record
-          attached to it, immediately.
+          attached to it, immediately, and asks PostHog to delete your usage information too.
         </li>
         <li>
           <strong>Anything else</strong> — for a copy of your data or any other privacy request, email
